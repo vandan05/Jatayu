@@ -235,7 +235,7 @@
 }
 
 /* Responsive Storytelling styles */
-@media (min-width: 1025px) {
+@media (min-width: 901px) {
   .problemWrapper {
     padding-top: 120px;
     padding-bottom: 120px;
@@ -427,7 +427,13 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
+  .previewWrap{
+    display: grid;
+        gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 16px;
+  }
   .problem {
     padding: 60px 0 120px;
   }
@@ -456,6 +462,9 @@
   .problemKicker {
     margin-top: 0;
   }
+  .problemTitle {
+    font-size: clamp(44px, 8vw, 70px);
+  }
 
   .statCards {
     grid-column: 1;
@@ -463,6 +472,8 @@
     margin-left: 0;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: none;
+    gap: 16px;
+    margin-top: 16px;
   }
 
   .statCards> :nth-child(n) {
@@ -476,7 +487,18 @@
 }
 
 @media (max-width: 600px) {
-  .statCards {
+  /* .statCards {
     grid-template-columns: 1fr;
+  } */
+  .problem {
+    padding: 48px 0 88px;
+  }
+
+  .problemTitle {
+    font-size: clamp(36px, 11vw, 54px);
+  }
+
+  .problemDesc {
+    max-width: 100%;
   }
 }

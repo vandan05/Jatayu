@@ -328,13 +328,13 @@
 }
 
 @media (hover: none),
-(max-width: 1024px) {
+(max-width: 900px) {
   .hoverPreview {
     display: none;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .top {
     grid-template-columns: 1fr;
     padding: 0;

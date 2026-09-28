@@ -180,8 +180,17 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .faqInner { grid-template-columns: 1fr; }
   .faqLeft,
   .accLight { grid-column: 1; }
+  .faqLeft :global(.display) { font-size: clamp(48px, 9vw, 70px); }
+}
+
+@media (max-width: 600px) {
+  .faq { padding: 88px 0; }
+  .faqLeft :global(.display) { font-size: clamp(38px, 11vw, 58px); }
+  .accItem { padding: 18px; }
+  .accLight .accTitle { font-size: 18px; }
+  .accPanel p { font-size: 16px; }
 }

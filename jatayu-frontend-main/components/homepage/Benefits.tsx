@@ -69,7 +69,7 @@ export default function Benefits() {
                     width={440}
                     height={560}
                     className={styles.bcardImgEl}
-                    sizes="(max-width: 1024px) 100vw, 25vw"
+                    sizes="(max-width: 900px) 100vw, 25vw"
                   />
                 </div>
               </div>

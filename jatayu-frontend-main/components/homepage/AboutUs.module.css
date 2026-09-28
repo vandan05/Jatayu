@@ -144,13 +144,23 @@
 }
 
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
+  .aboutUsTitle {
+    grid-column: auto;
+    font-size: clamp(44px, 8vw, 70px);
+  }
+
+  .titleAccess {
+    white-space: normal;
+  }
+
   .aboutUsTop {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
   .aboutUsMeta {
+    grid-column: auto;
     justify-self: start;
   }
 
@@ -186,6 +196,10 @@
 @media (max-width: 640px) {
   .aboutUs {
     padding: 96px 0;
+  }
+
+  .aboutUsTitle {
+    font-size: clamp(38px, 11vw, 58px);
   }
 
   .featureGrid {

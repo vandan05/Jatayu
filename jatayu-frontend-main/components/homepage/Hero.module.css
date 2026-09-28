@@ -203,10 +203,11 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .heroInner { 
     grid-template-columns: 1fr;
-    row-gap: 26px; 
+    row-gap: 16px; 
+    margin-top: 30px;
   }
 
   .heroLeft,
@@ -223,7 +224,7 @@
   .heroJoinCta {
     margin-top: 0;
   }
-
+.heroCta{margin-top: 16px;}
   .heroLeft {
     transform: none;
     gap: 12px;
@@ -250,6 +251,6 @@
 }
 
 @media (max-width: 600px) {
-  .hero { padding-top: 90px; }
+  .hero { padding-top: 64px; }
   .heroStats { grid-template-columns: 1fr 1fr; gap: 20px; }
 }

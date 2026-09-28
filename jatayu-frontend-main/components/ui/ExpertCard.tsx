@@ -92,7 +92,7 @@ export default function ExpertCard({
               alt={expert.name}
               fill
               className={styles.expertImage}
-              sizes="(max-width: 1024px) 50vw, 25vw"
+              sizes="(max-width: 900px) 50vw, 25vw"
               priority={priority}
               loading={(expert.image === "/assets/img/team1.png" || expert.image === "/assets/img/team2.png") && !priority ? "eager" : undefined}
             />

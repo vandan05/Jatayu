@@ -534,14 +534,29 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .benefitsHead { grid-template-columns: 1fr; }
   .benefitsTitle, .benefitsLines, .benefitsRuleRow, .benefitsDesc { grid-column: 1; }
+  .benefitsTitle { font-size: clamp(48px, 9vw, 86px); }
+  .titleLineNoWrap,
+  .titleLeadNoWrap { white-space: normal; }
   .benefitsLines { display: none; }
   .benefitsRuleRow, .benefitsDesc { grid-row: auto; }
   .benefitsDesc { justify-self: start; }
-  .benefitsGrid { grid-template-columns: 1fr; }
-  .benefitsRightCol { grid-template-columns: 1fr; }
+  .benefitsGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .benefitsGrid > .bcard,
+  .benefitsRightCol {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .benefitsRightCol {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .benefitsFoot {
     grid-column: 1;
     display: flex;
@@ -561,5 +576,86 @@
 }
 
 @media (max-width: 600px) {
-  .logosTrack { gap: 16px; }
+  .benefits {
+    padding: 48px 0 88px;
+  }
+
+  .benefitsHead {
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+
+  .benefitsTitle {
+    font-size: clamp(38px, 11vw, 58px);
+  }
+
+  .benefitsDesc {
+    margin-top: 0;
+    font-size: 15px;
+  }
+
+  .benefitsDesc br {
+    display: none;
+  }
+
+  .benefitsGrid,
+  .benefitsRightCol {
+    gap: 16px;
+  }
+
+  .benefitsGrid > .bcard:first-child .bcardPortrait {
+    --portrait-pad-x: 20px;
+    --portrait-pad-top: 20px;
+    clip-path: none;
+    -webkit-clip-path: none;
+    border-radius: 6px;
+  }
+
+  .bcardOffer .bcardOfferPrice,
+  .bcardOffer .bcardOfferType {
+    font-size: 20px;
+  }
+
+  .bcardOffer .bcardOfferDesc {
+    font-size: 15px;
+    max-width: none;
+  }
+
+  .benefitsGrid > .bcard:first-child .bcardPortrait .bcardImg {
+    aspect-ratio: 4 / 5;
+  }
+
+  .bcardBrands,
+  .bcardMotion,
+  .bcardBeyond,
+  .benefitsFoot {
+    clip-path: none;
+    -webkit-clip-path: none;
+    border-radius: 6px;
+  }
+
+  .bcardBrands,
+  .bcardMotion {
+    padding: 20px;
+  }
+
+  .bcardMotion .bcardImg {
+    margin-top: 12px;
+  }
+
+  .bcardBeyond {
+    padding: 20px;
+  }
+
+  .benefitsFoot {
+    padding: 20px;
+  }
+
+  .benefitsFootMain {
+    width: 100%;
+  }
+
+  .logosTrack {
+    gap: 16px;
+  }
 }

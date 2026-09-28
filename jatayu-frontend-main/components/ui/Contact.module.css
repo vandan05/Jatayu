@@ -257,7 +257,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .contactInner {
     grid-template-columns: 1fr;
   }
@@ -289,6 +289,18 @@
   .contactFormWrap {
     grid-row: auto;
   }
+  .contactTitle {
+    font-size: clamp(56px, 10vw, 86px);
+  }
+
+  .contactTitleLine { white-space: normal; }
+}
+
+@media (max-width: 600px) {
+  .contact { padding: 88px 0 72px; }
+  .contactTitle { font-size: clamp(42px, 13vw, 64px); }
+  .contactBlurb { margin-top: 48px; }
+  .contactActionsWrap { margin-top: 48px; }
 }
 
 .errorMessage {

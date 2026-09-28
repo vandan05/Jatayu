@@ -895,12 +895,23 @@
 
   .speaksTop {
     grid-column: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr) auto;
     row-gap: 20px;
     margin-bottom: 24px;
   }
 
-  .speaksTitle,
+  .speaksTitle {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .filterBookmarkRow {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+  }
+
   .speaksRight {
     grid-column: auto;
     grid-row: auto;
@@ -922,10 +933,30 @@
     grid-column: auto;
   }
 
+  .topBar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .searchFieldContainer {
+    grid-column: 1;
+    min-width: 0;
+  }
+
+  .sortWrapper {
+    grid-column: 2;
+    width: auto;
+  }
+
+  .customSelectContainer {
+    flex: 0 1 220px;
+    width: 220px;
+  }
+
   .speaksCards {
     position: static;
     z-index: auto;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .speaksDesc {
@@ -951,11 +982,47 @@
   }
 
   .speaksTitle {
-    font-size: clamp(36px, 11vw, 52px);
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 40px;
+  }
+
+  .keepTogether {
+    white-space: normal;
+  }
+
+  .filterBookmarkRow {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .speaksDesc {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .topBar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .searchFieldContainer,
+  .sortWrapper {
+    grid-column: 1;
+  }
+
+  .sortWrapper {
+    justify-content: space-between;
+  }
+
+  .customSelectContainer {
+    flex: 0 1 70%;
+    width: 70%;
   }
 
   .speaksCards {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -990,4 +1057,4 @@
   color: var(--dove-gray, #666);
   text-align: center;
   margin-top: 12px;
-}
+}
